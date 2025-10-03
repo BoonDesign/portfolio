@@ -111,6 +111,7 @@ section.show {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,255,204,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  padding:10px;
 }
 .project-card:hover {
   transform: scale(1.03);
