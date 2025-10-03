@@ -34,15 +34,20 @@ header {
 }
 .nav-links li a {
   font-weight: 500;
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 .nav-links li a.active {
   color: #9a46df;
   font-weight: 600;
+  transform: scale(1.1);
+  transition: transform 0.3s;
 }
 
 .nav-links li a:hover {
-  transform: scale(1.2);
-  transition: transform 0.6s;
+  transform: scale(1.1);
+  transition: transform 0.3s;
+  color: #9a46df;
 }
 .hamburger {
   display: none;
