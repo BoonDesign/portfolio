@@ -1,22 +1,22 @@
 const projects = [
-{
-title: 'Projekt 1',
-img: 'https://via.placeholder.com/400x180',
-demo: '#',
-github: '#'
-},
-{
-title: 'Projekt 2',
-img: 'https://via.placeholder.com/400x180',
-demo: '#',
-github: '#'
-},
-{
-title: 'Projekt 3',
-img: 'https://via.placeholder.com/400x180',
-demo: '#',
-github: '#'
-}
+  {
+    title: "Portfolio",
+    icon: "fa-solid fa-laptop-code",
+    description: "Moje pierwsze portfolio frontendowe",
+    link: "https://github.com/twoj-login/portfolio"
+  },
+  {
+    title: "Sklep internetowy",
+    icon: "fa-solid fa-cart-shopping",
+    description: "Projekt sklepu online z koszykiem i filtrowaniem",
+    link: "https://github.com/twoj-login/shop-project"
+  },
+  {
+    title: "Aplikacja pogodowa",
+    icon: "fa-solid fa-cloud-sun",
+    description: "Aplikacja pokazująca aktualną pogodę w wybranym mieście",
+    link: "https://github.com/twoj-login/weather-app"
+  }
 ];
 
 
@@ -91,39 +91,17 @@ window.addEventListener('scroll', () => {
   });
 });
 
-const projects = [
-{
-title: "Strona portfolio",
-image: "images/portfolio.png",
-description: "Moje pierwsze portfolio frontendowe",
-link: ""
-},
-{
-title: "Sklep internetowy",
-image: "images/shop.png",
-description: "Projekt sklepu online z koszykiem i filtrowaniem",
-link: ""
-},
-{
-title: "Aplikacja pogodowa",
-image: "images/weather.png",
-description: "Aplikacja pokazująca aktualną pogodę w wybranym mieście",
-link: ""
-}
-];
-
-
 const projectsContainer = document.getElementById('projects-container');
 
 
 projects.forEach(project => {
-const card = document.createElement('div');
-card.classList.add('project-card');
-card.innerHTML = `
-<img src="${project.image}" alt="${project.title}">
-<h3>${project.title}</h3>
-<p>${project.description}</p>
-<a href="${project.link}" target="_blank">Zobacz projekt</a>
-`;
-projectsContainer.appendChild(card);
+  const card = document.createElement('div');
+  card.classList.add('project-card');
+  card.innerHTML = `
+    <i class="${project.icon}" style="font-size: 60px; color: #00ffcc; margin: 20px 0;"></i>
+    <h3>${project.title}</h3>
+    <p>${project.description}</p>
+    <a href="${project.link}" target="_blank">Zobacz projekt</a>
+  `;
+  projectsContainer.appendChild(card);
 });
