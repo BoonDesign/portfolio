@@ -90,3 +90,40 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+const projects = [
+{
+title: "Strona portfolio",
+image: "images/portfolio.png",
+description: "Moje pierwsze portfolio frontendowe",
+link: ""
+},
+{
+title: "Sklep internetowy",
+image: "images/shop.png",
+description: "Projekt sklepu online z koszykiem i filtrowaniem",
+link: ""
+},
+{
+title: "Aplikacja pogodowa",
+image: "images/weather.png",
+description: "Aplikacja pokazująca aktualną pogodę w wybranym mieście",
+link: ""
+}
+];
+
+
+const projectsContainer = document.getElementById('projects-container');
+
+
+projects.forEach(project => {
+const card = document.createElement('div');
+card.classList.add('project-card');
+card.innerHTML = `
+<img src="${project.image}" alt="${project.title}">
+<h3>${project.title}</h3>
+<p>${project.description}</p>
+<a href="${project.link}" target="_blank">Zobacz projekt</a>
+`;
+projectsContainer.appendChild(card);
+});
