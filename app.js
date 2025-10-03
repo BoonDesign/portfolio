@@ -21,16 +21,18 @@ const projects = [
 
 
 const projectsContainer = document.getElementById('projects-container');
+
+
 projects.forEach(project => {
-const card = document.createElement('div');
-card.classList.add('project-card');
-card.innerHTML = `
-<img src="${project.img}" alt="${project.title}">
-<h3>${project.title}</h3>
-<a href="${project.demo}" target="_blank">Live</a>
-<a href="${project.github}" target="_blank">GitHub</a>
-`;
-projectsContainer.appendChild(card);
+  const card = document.createElement('div');
+  card.classList.add('project-card');
+  card.innerHTML = `
+    <i class="${project.icon}" style="font-size: 60px; color: #00ffcc; margin: 20px 0;"></i>
+    <h3>${project.title}</h3>
+    <p>${project.description}</p>
+    <a href="${project.link}" target="_blank">Zobacz projekt</a>
+  `;
+  projectsContainer.appendChild(card);
 });
 
 
@@ -91,17 +93,3 @@ window.addEventListener('scroll', () => {
   });
 });
 
-const projectsContainer = document.getElementById('projects-container');
-
-
-projects.forEach(project => {
-  const card = document.createElement('div');
-  card.classList.add('project-card');
-  card.innerHTML = `
-    <i class="${project.icon}" style="font-size: 60px; color: #00ffcc; margin: 20px 0;"></i>
-    <h3>${project.title}</h3>
-    <p>${project.description}</p>
-    <a href="${project.link}" target="_blank">Zobacz projekt</a>
-  `;
-  projectsContainer.appendChild(card);
-});
