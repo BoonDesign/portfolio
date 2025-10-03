@@ -39,6 +39,11 @@ header {
   color: #00ffcc;
   font-weight: 600;
 }
+
+.nav-links li a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(0,255,204,0.2);
+}
 .hamburger {
   display: none;
   flex-direction: column;
@@ -54,7 +59,7 @@ header {
 
 /* Hero Section */
 #hero {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
