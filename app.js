@@ -1,36 +1,55 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Projekty w JSON
-  const projects = [
-    {
-      title: 'Landing page BHP',
-      img: 'images/projekt1.jpg',
-      link: 'https://github.com/twoj-login/projekt1'
-    },
-    {
-      title: 'Portfolio w JS',
-      img: 'images/projekt2.jpg',
-      link: 'https://twojadomena.pl/projekt2'
-    }
-  ];
+const projects = [
+{
+title: 'Projekt 1',
+img: 'https://via.placeholder.com/400x180',
+demo: '#',
+github: '#'
+},
+{
+title: 'Projekt 2',
+img: 'https://via.placeholder.com/400x180',
+demo: '#',
+github: '#'
+},
+{
+title: 'Projekt 3',
+img: 'https://via.placeholder.com/400x180',
+demo: '#',
+github: '#'
+}
+];
 
-  const container = document.getElementById('projects-container');
-  projects.forEach(p => {
-    const card = document.createElement('div');
-    card.className = 'project-card';
-    card.innerHTML = `
-      <img src="${p.img}" alt="${p.title}">
-      <h3>${p.title}</h3>
-      <a href="${p.link}" target="_blank">Zobacz projekt</a>
-    `;
-    container.appendChild(card);
-  });
 
-  // Formularz kontaktowy (demo)
-  const form = document.getElementById('contact-form');
-  const result = document.getElementById('form-result');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    result.textContent = 'Dziękuję za wiadomość! 📬';
-    form.reset();
-  });
+const projectsContainer = document.getElementById('projects-container');
+projects.forEach(project => {
+const card = document.createElement('div');
+card.classList.add('project-card');
+card.innerHTML = `
+<img src="${project.img}" alt="${project.title}">
+<h3>${project.title}</h3>
+<a href="${project.demo}" target="_blank">Live</a>
+<a href="${project.github}" target="_blank">GitHub</a>
+`;
+projectsContainer.appendChild(card);
+});
+
+
+// Hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+navLinks.classList.toggle('active');
+});
+
+
+// Formularz kontaktowy (symulacja wysyłki)
+const contactForm = document.getElementById('contact-form');
+const formResult = document.getElementById('form-result');
+
+
+contactForm.addEventListener('submit', e => {
+e.preventDefault();
+formResult.textContent = 'Wiadomość wysłana! (symulacja)';
+formResult.style.color = '#00ffcc';
+contactForm.reset();
 });

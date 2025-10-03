@@ -3,67 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BonDesign - z pasji do designu</title>
+  <title>BonDesign  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <div class="logo">BonDesign</div>
-    <nav>
-      <a href="#about">O mnie</a>
-      <a href="#projects">Projekty</a>
-      <a href="#skills">Umiejętności</a>
-      <a href="#contact">Kontakt</a>
-    </nav>
-  </header>
+<header>
+  <div class="logo">BonDesign</div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#about">O mnie</a></li>
+      <li><a href="#projects">Projekty</a></li>
+      <li><a href="#skills">Umiejętności</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
 
-  <main>
-    <section id="hero">
-      <h1>Elocha</h1>
-      <p>Tworzę nowoczesne strony i aplikacje webowe.</p>
-      <a href="#contact" class="cta-btn">Skontaktuj się</a>
-    </section>
+<main>
+  <section id="hero">
+    <h1>Cześć, jestem Kuba 👋</h1>
+    <p>Frontend Developer | Tworzę nowoczesne strony i aplikacje webowe</p>
+    <a href="#projects" class="cta-btn">Zobacz moje projekty</a>
+  </section>
 
-    <section id="about">
-      <h2>O mnie</h2>
-      <p>Jestem front-end developerem z pasją do czystego kodu i nowoczesnego designu...</p>
-    </section>
+  <section id="about">
+    <h2>O mnie</h2>
+    <p>Jestem front-end developerem specjalizującym się w nowoczesnych interaktywnych stronach internetowych. Lubię eksperymentować z animacjami, responsywnością i dynamicznym ładowaniem treści.</p>
+  </section>
 
-    <section id="projects">
-      <h2>Projekty</h2>
-      <div class="projects-grid" id="projects-container">
-        <!-- JS wygeneruje projekty -->
-      </div>
-    </section>
+  <section id="projects">
+    <h2>Projekty</h2>
+    <div class="projects-grid" id="projects-container"></div>
+  </section>
 
-    <section id="skills">
-      <h2>Umiejętności</h2>
-      <ul class="skills-list">
-        <li>HTML5</li>
-        <li>CSS3 / Tailwind</li>
-        <li>JavaScript (ES6+)</li>
-        <li>React</li>
-        <li>Git / GitHub</li>
-      </ul>
-    </section>
+  <section id="skills">
+    <h2>Umiejętności</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3 / Tailwind</li>
+      <li>JavaScript (ES6+)</li>
+      <li>React</li>
+      <li>Git / GitHub</li>
+    </ul>
+  </section>
 
-    <section id="contact">
-      <h2>Kontakt</h2>
-      <form id="contact-form">
-        <input type="text" name="name" placeholder="Twoje imię" required>
-        <input type="email" name="email" placeholder="Twój email" required>
-        <textarea name="message" placeholder="Wiadomość..." required></textarea>
-        <button type="submit">Wyślij</button>
-      </form>
-      <div id="form-result"></div>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Twoje imię" required>
+      <input type="email" name="email" placeholder="Twój email" required>
+      <textarea name="message" placeholder="Wiadomość..." required></textarea>
+      <button type="submit">Wyślij</button>
+    </form>
+    <div id="form-result"></div>
+  </section>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Jan Kowalski – Portfolio</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 BonDesign – Portfolio</p>
+</footer>
 
-  <script src="app.js" defer></script>
+<script src="app.js" defer></script>
 </body>
 </html>
