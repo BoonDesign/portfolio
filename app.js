@@ -1,20 +1,20 @@
 const projects = [
   {
-    title: "Portfolio",
+    title: "Strony internetowe",
     icon: "fa-solid fa-laptop-code",
-    description: "Moje pierwsze portfolio frontendowe",
+    description: "Dopasowane do profilu twojej firmy,CMS oparte na WordPress lub projekty indywidualne",
     link: "https://github.com/twoj-login/portfolio"
   },
   {
-    title: "Sklep internetowy",
+    title: "Sklepy internetowe",
     icon: "fa-solid fa-cart-shopping",
-    description: "Projekt sklepu online z koszykiem i filtrowaniem",
+    description: "Projekt oparte na PrestaShop lub WooCommerce",
     link: "https://github.com/twoj-login/shop-project"
   },
   {
-    title: "Aplikacja pogodowa",
+    title: "Digital Marketing",
     icon: "fa-solid fa-cloud-sun",
-    description: "Aplikacja pokazująca aktualną pogodę w wybranym mieście",
+    description: "Kompletny Kit dla startu strony w Google",
     link: "https://github.com/twoj-login/weather-app"
   }
 ];
